@@ -48,7 +48,7 @@ function main(args)
         nionpos = 10
         open("Moire.ionpos", "w") do io
                 write(io, "ion B 0 0 0 1\n")
-                write(io, "ion B 0 0 6 1\n")
+                write(io, "ion B 0 0 12 1\n")
                 for n in -nionpos:nionpos
                         for m in -nionpos:nionpos
                                 pos = n*a1+m*a2
@@ -113,7 +113,7 @@ function main(args)
                                 thetapos4 < pi/3 || continue
                                 thetapos4 > 0  || continue
 
-                                write(io, "ion B $(pos[1]) $(pos[2]) 6 1 \n")
+                                write(io, "ion B $(pos[1]) $(pos[2]) 12 1 \n")
                         end
                 end
                 write(io, "\n\n")
@@ -136,7 +136,7 @@ function main(args)
                                 thetapos4 < pi/3 || continue
                                 thetapos4 > 0  || continue
 
-                                write(io, "ion N $(pos[1]) $(pos[2]) 6 1 \n")
+                                write(io, "ion N $(pos[1]) $(pos[2]) 12 1 \n")
                         end
                 end
         end
